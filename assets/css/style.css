@@ -1,13 +1,18 @@
+html {
+    height: 100%;
+    overflow-y: hidden;
+}
+
 body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     text-align: center;
     display: grid;
-    grid-template-rows: 7.5% 1fr 7.5%;
+    grid-template-rows: 7.5% 85% 7.5%;
     grid-template-columns: 1fr 3fr 1fr; 
     background-image: url("../images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
 }
 
 header {
@@ -29,12 +34,12 @@ h1 {
     font-family: 'Georgia', Times, 'Times New Roman', serif;
     font-size: 24px; 
     font-weight: bold;
-    grid-area: 1 / 2 / 4 / 3; /* move to media query */
-    line-height: 300%; /* move to media query */
+    grid-area: 1 / 2 / 4 / 3; 
+    line-height: 300%; 
 }
 
 nav {
-    grid-area: 2 / 4 / 3 / 5; /* move to media query */
+    grid-area: 2 / 4 / 3 / 5; 
     text-align: right;
 }
 
@@ -72,21 +77,38 @@ hr {
 }
 
 .content {
-    display: grid;
     width: 90%; 
-    grid-template-rows: 50% 1fr 1fr 1fr; 
-    grid-template-columns: 150px 1fr; 
-    grid-gap: 10px; 
+    display: grid;
+    grid-template-rows: 65% 1fr 1fr;
+    grid-template-columns: 25% auto;
 }
 
 #mypic {
-    height: 150%;
+    height: 30vh;
     width: auto;
+    grid-area: 1 / 1 / 2 / 2;
+    margin: auto;
 }
 
 p {
     color: #777777;
     line-height: 200%; 
+    height: max-content;
+}
+
+#p1 {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 1% 0 0 2%;
+}
+
+#p2 {
+    grid-area: 2 / 1 / 3 / 3;
+    margin-top: 2%;
+}
+
+#p3 {
+    grid-area: 3 / 1 / 4 / 3;
+    margin-top: 2%;
 }
 
 form {
@@ -147,7 +169,7 @@ input, textarea {
 #label1, #label2, #label3, #label4, #label5 {
     color: #ffffff;
     background: #4aaaa5;
-    z-index: 99;
+    z-index: 9;
     line-height: 40px;
     height: 40px;
     width: 90%;
@@ -167,10 +189,26 @@ h4 {
     line-height: 400%;
 }
 
+.grow:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+.circle:hover
+{
+        border-radius:50%;
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+}
 /* ================================================================================== */
 
 @media screen and (max-width: 980px) {
 
+
+/* navbar stacks at this size */
     body {
         grid-template-columns: 1fr 6fr 1fr;
     }
@@ -217,6 +255,33 @@ h4 {
     h3 {
         font-size: 3.0vh; 
     }
+
+    .content {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 20% auto 20%;
+    }
+    
+    #mypic {
+        grid-area: 1 / 2 / 2 / 3;
+        width: 100%;
+        height: auto;
+    }
+    
+    #p1 {
+        grid-area: 2 / 1 / 3 / 4;
+        margin: 4% auto 1% auto;
+    }
+    
+    #p2 {
+        grid-area: 3/ 1 / 4 / 4;
+        margin: 3% auto 1% auto;
+    }
+    
+    #p3 {
+        grid-area: 4 / 1 / 5 / 4;
+        margin: 3% auto auto auto;
+    }
+
 } 
 
 /* ================================================================================== */
@@ -244,6 +309,32 @@ h4 {
         line-height: 400%;
     }
 
+    .content {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 20% auto 20%;
+    }
+    
+    #mypic {
+        grid-area: 1 / 2 / 2 / 3;
+        width: 100%;
+        height: auto;
+    }
+    
+    #p1 {
+        grid-area: 2 / 1 / 3 / 4;
+        margin: 4% auto 1% auto;
+    }
+    
+    #p2 {
+        grid-area: 3/ 1 / 4 / 4;
+        margin: 3% auto 1% auto;
+    }
+    
+    #p3 {
+        grid-area: 4 / 1 / 5 / 4;
+        margin: 3% auto auto auto;
+    }
+
 }
 
 /* ================================================================================== */
@@ -252,7 +343,7 @@ h4 {
 
     body {
         grid-template-columns: 0.5fr 16fr 0.5fr;
-        grid-template-rows: 15% 1fr 5%;       
+        grid-template-rows: 15% 77% 8%;       
     }
 
     header {
@@ -260,9 +351,10 @@ h4 {
     }
 
     main {
-        height: 80vh;
+        height: 72vh;
         margin-top: 3%;
     }
+
 
     .projects {
         grid-template-columns: 1fr;
@@ -326,6 +418,32 @@ h4 {
         padding: 2%;
     }
 
+    .content {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+    }
+    
+    #mypic {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 65%;
+        height: auto;
+        margin: auto;
+    }
+    
+    #p1 {
+        grid-area: 2 / 1 / 3 / 2;
+        margin: 4% auto 1% auto;
+    }
+    
+    #p2 {
+        grid-area: 3/ 1 / 4 / 2;
+        margin: 3% auto 1% auto;
+    }
+    
+    #p3 {
+        grid-area: 4 / 1 / 5 / 2;
+        margin: 3% auto auto auto;
+    }
 
 }
 
