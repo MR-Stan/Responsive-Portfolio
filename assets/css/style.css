@@ -136,45 +136,58 @@ input, textarea {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-rows: 1fr 1fr;
     text-align: center;
 }
 
-#pic1, #pic2, #pic3, #pic4, #pic5 {
-    height: 90%;
+.container {
+    position: relative;
     width: 90%;
+    margin: 5% 0 5% 0;
 }
 
-#pic1, #label1 {
+#pic1, #pic2, #pic3, #pic4, #pic5, #pic6 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#PsychicGame {
     grid-area: 1 / 1 / 2 / 2;
 }
 
-#pic2, #label2 {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-#pic3, #label3 {
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-#pic4, #label4 {
+#WordGuessGame {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-#pic5, #label5 {
+#CrystalCollectorGame {
     grid-area: 1 / 3 / 2 / 4;
 }
 
-#label1, #label2, #label3, #label4, #label5 {
+#ComingSoon1 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#ComingSoon2 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+#ComingSoon3 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+#label1, #label2, #label3, #label4, #label5, #label6 {
     color: #ffffff;
     background: #4aaaa5;
     z-index: 9;
     line-height: 40px;
     height: 40px;
-    width: 90%;
-    margin-top: 55%;
+    width: 100%;
     font-size: 2vh;
+    position: absolute;
+    bottom: 10px;
 }
 
 footer {
@@ -189,20 +202,7 @@ h4 {
     line-height: 400%;
 }
 
-.grow:hover
-{
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
-}
 
-.circle:hover
-{
-        border-radius:50%;
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
-}
 /* ================================================================================== */
 @media screen and (max-width: 1300px) {
 
@@ -263,34 +263,44 @@ h4 {
     .projects {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 5%;
     }
 
-    #label1, #label2, #label3, #label4, #label5 {
+    #label1, #label2, #label3, #label4, #label5, #label6 {
         font-size: 2.25vh;
     }
 
-    #pic1, #label1 {
+    .container {
+        height: 100%;
+    }
+
+    #PsychicGame {
         grid-area: 1 / 1 / 2 / 2;
         width: 95%;
     }
     
-    #pic2, #label2 {
-        grid-area: 2 / 1 / 3 / 2;
-        width: 95%;
-    }
-    
-    #pic3, #label3 {
-        grid-area: 3 / 1 / 4 / 2;
-        width: 95%;
-    }
-    
-    #pic4, #label4 {
+    #WordGuessGame {
         grid-area: 1 / 2 / 2 / 3;
         width: 95%;
     }
     
-    #pic5, #label5 {
+    #CrystalCollectorGame {
+        grid-area: 2 / 1 / 3 / 2;
+        width: 95%;
+    }
+    
+    #ComingSoon1 {
         grid-area: 2 / 2 / 3 / 3;
+        width: 95%;
+    }
+    
+    #ComingSoon2 {
+        grid-area: 3 / 1 / 4 / 2;
+        width: 95%;
+    }
+
+    #ComingSoon3 {
+        grid-area: 3 / 2 / 4 / 3;
         width: 95%;
     }
 
@@ -341,7 +351,7 @@ h4 {
         margin-top: 4%;
     }
 
-    #label1, #label2, #label3, #label4, #label5 {
+    #label1, #label2, #label3, #label4, #label5, #label6 {
         font-size: 2.5vh;
     }
 
@@ -404,37 +414,50 @@ h4 {
 
 
     .projects {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: auto;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 0;
     }
 
-    #pic1, #label1 {
+    .container {
+        width: 95%;
+        height: 40vh;
+        position: relative;
+    }
+
+    #PsychicGame {
         grid-area: 1 / 1 / 2 / 2;
-        width: 95%;
     }
     
-    #pic2, #label2 {
+    #WordGuessGame {
         grid-area: 2 / 1 / 3 / 2;
-        width: 95%;
     }
     
-    #pic3, #label3 {
+    #CrystalCollectorGame {
         grid-area: 3 / 1 / 4 / 2;
-        width: 95%;
     }
     
-    #pic4, #label4 {
+    #ComingSoon1 {
         grid-area: 4 / 1 / 5 / 2;
-        width: 95%;
     }
     
-    #pic5, #label5 {
+    #ComingSoon2 {
         grid-area: 5 / 1 / 6 / 2;
-        width: 95%;
     }
 
-    #label1, #label2, #label3, #label4, #label5 {
+    #ComingSoon3 {
+        grid-area: 6 / 1 / 7 / 2;
+    }
+
+    #label1, #label2, #label3, #label4, #label5, #label6 {
+        position: absolute;
+        bottom: 10px;
         font-size: 3vh;
+    }
+
+    #pic1. #pic2, #pic3, #pic4, #pic5, #pic6 {
+        position: absolute;
     }
 
     h3 {
