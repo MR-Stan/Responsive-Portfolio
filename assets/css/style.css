@@ -136,7 +136,7 @@ input, textarea {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     text-align: center;
 }
 
@@ -144,9 +144,10 @@ input, textarea {
     position: relative;
     width: 90%;
     margin: 5% 0 5% 0;
+    height: 90%;
 }
 
-#pic1, #pic2, #pic3, #pic4, #pic5, #pic6 {
+#pic1, #pic2, #pic3, #pic4, #pic5, #pic6, #pic7, #pic8, #pic9 {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -162,23 +163,42 @@ input, textarea {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-#CrystalCollectorGame {
+#unit-4-game {
     grid-area: 1 / 3 / 2 / 4;
+    width: 95%;
 }
 
-#ComingSoon1 {
+#triviaGame {
     grid-area: 2 / 1 / 3 / 2;
+    width: 95%;
 }
 
-#ComingSoon2 {
+#gifTasticApp {
     grid-area: 2 / 2 / 3 / 3;
+    width: 95%;
 }
 
-#ComingSoon3 {
+#trainSchedulerApp {
     grid-area: 2 / 3 / 3 / 4;
+    width: 95%;
 }
 
-#label1, #label2, #label3, #label4, #label5, #label6 {
+#RPSGame {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 95%;
+}
+
+#tolltally {
+    grid-area: 3 / 2 / 4 / 3;
+    width: 95%;
+}
+
+#comingSoon {
+    grid-area: 3 / 3 / 4 / 4;
+    width: 95%;
+}
+
+#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9 {
     color: #ffffff;
     background: #4aaaa5;
     z-index: 9;
@@ -262,11 +282,11 @@ h4 {
 
     .projects {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 5%;
     }
 
-    #label1, #label2, #label3, #label4, #label5, #label6 {
+    #label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9 {
         font-size: 2.25vh;
     }
 
@@ -284,25 +304,42 @@ h4 {
         width: 95%;
     }
     
-    #CrystalCollectorGame {
+    #unit-4-game {
         grid-area: 2 / 1 / 3 / 2;
         width: 95%;
     }
     
-    #ComingSoon1 {
+    #triviaGame {
         grid-area: 2 / 2 / 3 / 3;
         width: 95%;
     }
     
-    #ComingSoon2 {
+    #gifTasticApp {
         grid-area: 3 / 1 / 4 / 2;
         width: 95%;
     }
 
-    #ComingSoon3 {
+    #trainSchedulerApp {
         grid-area: 3 / 2 / 4 / 3;
         width: 95%;
     }
+
+    #RPSGame {
+        grid-area: 4 / 1 / 5 / 2;
+        width: 95%;
+    }
+
+    #tolltally {
+        grid-area: 4 / 2 / 5 / 3;
+        width: 95%;
+    }
+
+    #comingSoon {
+        grid-area: 5 / 1 / 6 / 2;
+        width: 95%;
+    }
+
+
 
     h3 {
         font-size: 3.0vh; 
@@ -351,7 +388,7 @@ h4 {
         margin-top: 4%;
     }
 
-    #label1, #label2, #label3, #label4, #label5, #label6 {
+    #label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9 {
         font-size: 2.5vh;
     }
 
@@ -416,7 +453,7 @@ h4 {
     .projects {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 0;
     }
 
@@ -446,17 +483,29 @@ h4 {
         grid-area: 5 / 1 / 6 / 2;
     }
 
-    #tolltally {
+    #trainSchedulerApp {
         grid-area: 6 / 1 / 7 / 2;
     }
 
-    #label1, #label2, #label3, #label4, #label5, #label6 {
+    #RPSGame {
+        grid-area: 7 / 1 / 8 / 2;
+    }
+
+    #tolltally {
+        grid-area: 8 / 1 / 9 / 2;
+    }
+
+    #comingSoon {
+        grid-area: 9 / 1 / 10 / 2;
+    }
+
+    #label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9 {
         position: absolute;
         bottom: 10px;
         font-size: 3vh;
     }
 
-    #pic1. #pic2, #pic3, #pic4, #pic5, #pic6 {
+    #pic1. #pic2, #pic3, #pic4, #pic5, #pic6, #pic7, #pic8, #pic9 {
         position: absolute;
     }
 
